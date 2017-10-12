@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; astro_traj 0+untagged.67.gab034d3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/astro_traj-docs.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="astro_traj 0+untagged.67.gab034d3 documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> astro_traj
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.67.gab034d3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Determining Charateristics of Progenitor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../command-line/index.html">Running <code class="docutils literal"><span class="pre">LIGOTraj</span></code> on the command line</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">astro_traj</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/astro_traj.system.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-astro_traj.system"></span><p>Places system described by Mhe, M2, Apre, epre and position r(R,galphi,galcosth) in galaxy model gal
+Applies SNkick Vkick and mass loss Mhe-Mns to obtain Apost, epost, and SN-imparted systemic velocity V</p>
+<dl class="class">
+<dt id="astro_traj.system.System">
+<em class="property">class </em><code class="descclassname">astro_traj.system.</code><code class="descname">System</code><span class="sig-paren">(</span><em>gal</em>, <em>R</em>, <em>Mns</em>, <em>M2</em>, <em>Mhe</em>, <em>Apre</em>, <em>epre</em>, <em>d</em>, <em>Vkick</em>, <em>sys_flag=None</em>, <em>galphi=None</em>, <em>galcosth=None</em>, <em>omega=None</em>, <em>phi=None</em>, <em>costh=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System" title="Permalink to this definition">¶</a></dt>
+<dd><p>Places system described by Mhe, M2, Apre, epre and position r(R,galphi,galcosth) in galaxy model gal</p>
+<p>Applies SNkick Vkick and mass loss Mhe-Mns to obtain Apost, epost, and SN-imparted systemic velocity V</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#astro_traj.system.System.SN" title="astro_traj.system.System.SN"><code class="xref py py-obj docutils literal"><span class="pre">SN</span></code></a>()</td>
+<td>Mhe lies on origin moving in direction of positive y axis, M2 on negative X axis, Z completes right-handed coordinate system</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#astro_traj.system.System.check_success" title="astro_traj.system.System.check_success"><code class="xref py py-obj docutils literal"><span class="pre">check_success</span></code></a>(offset[,&nbsp;uncer])</td>
+<td># uncertainty in offset is 0.5 kpc by default</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#astro_traj.system.System.doMotion" title="astro_traj.system.System.doMotion"><code class="xref py py-obj docutils literal"><span class="pre">doMotion</span></code></a>([backend,&nbsp;NSTEPS,&nbsp;MAX_STEP,&nbsp;RTOL])</td>
+<td>Second order equation ma=-grad(U) converted to 2 sets of first order equations, with e.g.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#astro_traj.system.System.energy_check" title="astro_traj.system.System.energy_check"><code class="xref py py-obj docutils literal"><span class="pre">energy_check</span></code></a>([E_thresh])</td>
+<td>Compare total energy of first and last steps to ensure conservation</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#astro_traj.system.System.getVcirc" title="astro_traj.system.System.getVcirc"><code class="xref py py-obj docutils literal"><span class="pre">getVcirc</span></code></a>(X,&nbsp;Y,&nbsp;Z)</td>
+<td>Calculate circular velocity at X,Y,Z given potential.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#astro_traj.system.System.save_evolution" title="astro_traj.system.System.save_evolution"><code class="xref py py-obj docutils literal"><span class="pre">save_evolution</span></code></a>(filename)</td>
+<td>If called, will save the evolution of a given system for plotting orbital trajectory through galaxy</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#astro_traj.system.System.setTmerge" title="astro_traj.system.System.setTmerge"><code class="xref py py-obj docutils literal"><span class="pre">setTmerge</span></code></a>([Tmin,&nbsp;Tmax])</td>
+<td>Calculate the inspiral time for the binary after the supernova using formulae from <a class="reference external" href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.136.B1224">Peters 1964</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#astro_traj.system.System.setVxyz_0" title="astro_traj.system.System.setVxyz_0"><code class="xref py py-obj docutils literal"><span class="pre">setVxyz_0</span></code></a>()</td>
+<td>Here, vphi and vcosth are as galphi and galcosth, and give random direction for V_sys postSN</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#astro_traj.system.System.setXYZ_0" title="astro_traj.system.System.setXYZ_0"><code class="xref py py-obj docutils literal"><span class="pre">setXYZ_0</span></code></a>()</td>
+<td>Convert from spherical inputs to Cartesian coordinates</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#astro_traj.system.System.write_data" title="astro_traj.system.System.write_data"><code class="xref py py-obj docutils literal"><span class="pre">write_data</span></code></a>()</td>
+<td># [M2, Mns, Mhe, Apre, Apost, epre, epost, d, R, galcosth, galphi, Vkick, Tmerge, Rmerge, Rmerge_proj, Vfinal, flag]</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="astro_traj.system.System.SN">
+<code class="descname">SN</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.SN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.SN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mhe lies on origin moving in direction of positive y axis, M2 on negative X axis, Z completes right-handed coordinate system</p>
+<p>theta: angle between preSN He core velocity relative to M2 (i.e. the positive y axis) and the kick velocity
+phi: angle between Z axis and projection of kick onto X-Z plane</p>
+<p>Vr is velocity of preSN He core relative to M2, directed along the positive y axis</p>
+<p>Vkick is kick velocity with components Vkx, Vky, Vkz in the above coordinate system
+V_sys is the resulting center of mass velocity of the system IN THE TRANSLATED COM FRAME, imparted by the SN</p>
+<p>Paper reference:</p>
+<dl class="docutils">
+<dt>Kalogera 1996: <a class="reference external" href="http://iopscience.iop.org/article/10.1086/177974/meta">http://iopscience.iop.org/article/10.1086/177974/meta</a></dt>
+<dd>We use Eq 1, 3, 4, and 34: giving Vr, Apost, epost, and (Vsx,Vsy,Vsz) respectively
+Also see Fig 1 in that paper for coordinate system</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.check_success">
+<code class="descname">check_success</code><span class="sig-paren">(</span><em>offset</em>, <em>uncer=0.5</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.check_success"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.check_success" title="Permalink to this definition">¶</a></dt>
+<dd><p># uncertainty in offset is 0.5 kpc by default
+# assume that the observer is looking down the z-axis (so the offset will be the projection of the binary on the x-y plane)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.doMotion">
+<code class="descname">doMotion</code><span class="sig-paren">(</span><em>backend='dopri5'</em>, <em>NSTEPS=10000000000000.0</em>, <em>MAX_STEP=31557600000000.0</em>, <em>RTOL=1e-11</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.doMotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.doMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Second order equation ma=-grad(U) converted to 2 sets of first order equations, with
+e.g. x1 = x</p>
+<blockquote>
+<div><p>x2 = vx</p>
+<p>x1dot = vx = x2
+x2dot = ax = -grad_x(U)/m</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.energy_check">
+<code class="descname">energy_check</code><span class="sig-paren">(</span><em>E_thresh=0.001</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.energy_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.energy_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare total energy of first and last steps to ensure conservation
+Ek, Ep are kinetic and potential energy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.getVcirc">
+<code class="descname">getVcirc</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>Z</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.getVcirc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.getVcirc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate circular velocity at X,Y,Z given potential. From mv2/r = -grad_r(U)
+FIXME: Will have to change for spiral potential, as circular velocity is assumed to be within the disk</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.save_evolution">
+<code class="descname">save_evolution</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.save_evolution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.save_evolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>If called, will save the evolution of a given system for plotting orbital trajectory through galaxy
+Format: [t, X, Y, Z, Vx, Vy, Vz]
+The initial values are saved as the first item of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.setTmerge">
+<code class="descname">setTmerge</code><span class="sig-paren">(</span><em>Tmin=0.0</em>, <em>Tmax=10.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.setTmerge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.setTmerge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the inspiral time for the binary after the supernova using formulae from <a class="reference external" href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.136.B1224">Peters 1964</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.setVxyz_0">
+<code class="descname">setVxyz_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.setVxyz_0"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.setVxyz_0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Here, vphi and vcosth are as galphi and galcosth, and give random direction for V_sys postSN</p>
+<p>Initially, preSN circular trajectory Vp is the velocity vector of magnitude getVcirc,
+tangential to the sphere of radius R, in the R-Z plane</p>
+<p>We get the specific circular trajectory that we want by rotating this through angle omega while staying
+tangential to the sphere, giving Vp_rot (Vp_rot = Vp cos(omega) + (k x Vp) sin(omega)
+where k is unit vector r/R where r=(x,y,z)</p>
+<p>Specify flag=circ_test to set V0 without adding the SN-imparted velocity
+Specify flag=vkick_test to set the initial galactic velocity to 0, so that the velocity of the system is due solely to the supernova</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.setXYZ_0">
+<code class="descname">setXYZ_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.setXYZ_0"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.setXYZ_0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from spherical inputs to Cartesian coordinates</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="astro_traj.system.System.write_data">
+<code class="descname">write_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/astro_traj/system.html#System.write_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#astro_traj.system.System.write_data" title="Permalink to this definition">¶</a></dt>
+<dd><p># [M2, Mns, Mhe, Apre, Apost, epre, epost, d, R, galcosth, galphi, Vkick, Tmerge, Rmerge, Rmerge_proj, Vfinal, flag]
+# write things in reasonable units (e.g., Msun, kpc, km/s …)</p>
+</dd></dl>
+
+</dd></dl>
+
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Scott Coughlin.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.67.gab034d3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
